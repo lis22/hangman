@@ -1,0 +1,96 @@
+/*************************BODY SECTION ************************************************/
+body {
+  background-color: black;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+/********************CREATES CENTERED COLUMNS *****************************************/
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/*****************************MAIN CONTENT WRAPPER ************************************/
+.wrapper {
+  background-color:  #cfd8dc;
+}
+
+/*********************************HEADER SECTION **************************************/
+header {
+  background-color: #607d8b;
+  margin-top: 0;
+  margin-bottom: 3%;
+  padding: 2%;
+  font-family: 'Slackey', cursive;
+}
+
+header h1 {
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 0;
+}
+
+.fa {
+  font-size: 2em;
+}
+
+/*************************HANGMAN LETTER LIST SECTION**********************************/
+.revealLetters{
+  text-align: center;
+}
+
+#letterList  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#letterList li {
+  display: inline-block;
+  margin: 1%;
+  font-weight:600;
+  font-size: 2em;
+}
+
+/****************************FEEDBACK SECTION ******************************************/
+.answerFeedback {
+  background-color: #FFD180;
+  padding: 2%;
+  margin: 2%;
+  text-align: center;
+  min-height: 6em;
+  vertical-align: center;
+}
+
+/*************************INPUT LETTERS/BUTTONS  SECTION********************************/
+.btn-toolbar .btn {
+  margin: 0 3% 2% 2%;
+  border-radius: 0 !important;
+  width: 48px;
+  font-weight:600;
+}
+
+.btn-toolbar {
+  margin: 2%;
+  text-align: center;
+}
+
+.btn-toolbar .btn-group {
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newGameBtn {
+  visibility: hidden;
+  margin-top: 1%;
+}
+
+/****************************FOOTER SECTION *******************************************/
+.footer  {
+  padding:2%;
+  margin-top: 3%;
+  background-color: #607d8b;
+  color: white;
+  text-align: center;
+}
