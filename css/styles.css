@@ -83,8 +83,7 @@ header h1 {
 
 .newGameBtn {
   visibility: hidden;
-  margin-top: 1%;
-  margin-right: 2%;
+  margin: 1% 2% 1% 0;
 }
 
 /****************************FOOTER SECTION *******************************************/
