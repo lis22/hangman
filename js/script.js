@@ -32,6 +32,7 @@ $(function(){
     correctLettersCount=0;
     getRandomWord();
     $(".img-responsive").attr("src", imgSource[wrongCount]);
+    $(".btn-toolbar").hide();
     $('.newGameBtn').css('visibility', 'hidden');
     $('#letterList li').remove();
     setFeedback("Pick a letter below that you think is in the word</br>10 wrong guesses and the game is over", "#FFD180");
@@ -76,6 +77,7 @@ function WordComplete(data) {
 
   else {
     charArray = word.split("");
+    $(".btn-toolbar").show();
     createLetters()
   }
 }
