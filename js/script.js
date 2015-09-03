@@ -159,7 +159,7 @@ function updateView(posArray, guess,context) {
         setFeedback("You won! Great job!</br>Click 'New Game' to play again", "#dff0d8");
         gameOver();
       }
- 
+
   }
 
   //The letter was wrong
