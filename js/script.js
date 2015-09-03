@@ -147,11 +147,7 @@ function updateView(posArray, guess,context) {
 
 
   //Tests if the letter has position(s)
-<<<<<<< HEAD
    if(posArray.length >0 ) {
-=======
-  if(posArray.length >0 ) {
->>>>>>> master
     $(context).removeClass('btn-default');
     $(context).addClass('btn-success');
     revealLetters(posArray, guess);
@@ -163,10 +159,7 @@ function updateView(posArray, guess,context) {
         setFeedback("You won! Great job!</br>Click 'New Game' to play again", "#dff0d8");
         gameOver();
       }
-<<<<<<< HEAD
 
-=======
->>>>>>> master
   }
 
   //The letter was wrong
