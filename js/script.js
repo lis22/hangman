@@ -22,9 +22,14 @@ var imgSource = [
 
 $(function(){
 
+  var isFirefox = typeof InstallTrigger !== 'undefined';
+
   $(".revealLetters").append('<ul id="letterList"> </ul>');
-  //reset needed for firefox reload see https://bugzilla.mozilla.org/show_bug.cgi?id=654072
-  resetButtons();
+
+  if (isFirefox) {
+    //reset needed for firefox reload see https://bugzilla.mozilla.org/show_bug.cgi?id=654072
+    resetButtons();
+  }
   getRandomWord();
   createLetters();
 
