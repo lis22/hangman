@@ -19,7 +19,7 @@ var imgSource = [
   ['./images/hang10.gif'],
 ];
 
-$(function(){
+$(function(){ 
 
   $(".revealLetters").append('<ul id="letterList"> </ul>');
   getRandomWord();
