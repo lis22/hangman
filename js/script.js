@@ -33,6 +33,7 @@ $(function(){
     correctLettersCount=0;
     getRandomWord();
     $(".img-responsive").attr("src", imgSource[wrongCount]);
+    $(".btn-toolbar").hide();
     $('.newGameBtn').css('visibility', 'hidden');
     $('#letterList li').remove();
     setFeedback("Pick a letter below that you think is in the word</br>10 wrong guesses and the game is over", "#FFD180");
@@ -77,6 +78,7 @@ function WordComplete(data) {
 
   else {
     charArray = word.split("");
+    $(".btn-toolbar").show();
     createLetters()
   }
 }
@@ -145,7 +147,11 @@ function updateView(posArray, guess,context) {
 
 
   //Tests if the letter has position(s)
+<<<<<<< HEAD
    if(posArray.length >0 ) {
+=======
+  if(posArray.length >0 ) {
+>>>>>>> master
     $(context).removeClass('btn-default');
     $(context).addClass('btn-success');
     revealLetters(posArray, guess);
@@ -157,7 +163,10 @@ function updateView(posArray, guess,context) {
         setFeedback("You won! Great job!</br>Click 'New Game' to play again", "#dff0d8");
         gameOver();
       }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   }
 
   //The letter was wrong
