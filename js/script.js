@@ -1,6 +1,7 @@
 //global variables
 var word;
 var charArray=[];
+
 var wrongCount=0;
 var correctLettersCount=0;
 
@@ -127,7 +128,7 @@ function checkGuess(guess){
   for(var i=0; i<charArray.length; i++) {
     if(guess==charArray[i]) {
       posArray.push(i);
-      correctLettersCount++;
+      ++correctLettersCount;
     }
   }
   return posArray;
@@ -142,19 +143,21 @@ function updateView(posArray, guess,context) {
   //disables the letter chosen so it cannot be clicked again
   $(context).prop('disabled', true);
 
-  //Tests if won game
-  if(correctLettersCount == charArray.length) {
-    revealLetters(posArray, guess);
-    setFeedback("You won! Great job!</br>Click 'New Game' to play again", "#dff0d8");
-    gameOver();
-  }
 
   //Tests if the letter has position(s)
-  else if(posArray.length >0 ) {
+   if(posArray.length >0 ) {
     $(context).removeClass('btn-default');
     $(context).addClass('btn-success');
     revealLetters(posArray, guess);
     setFeedback(guess + " is in the word!</br> " + getTriesLeft(), "#dff0d8");
+
+      //Tests if won game
+      if(correctLettersCount == charArray.length) {
+        revealLetters(posArray, guess);
+        setFeedback("You won! Great job!</br>Click 'New Game' to play again", "#dff0d8");
+        gameOver();
+      }
+
   }
 
   //The letter was wrong
@@ -174,6 +177,7 @@ function updateView(posArray, guess,context) {
       gameOver();
     }
   }
+
 }
 
 /*Determines how many tries the user has left and returns a message */
