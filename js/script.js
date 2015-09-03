@@ -24,7 +24,7 @@ $(function(){
   $(".revealLetters").append('<ul id="letterList"> </ul>');
 
   //reset needed for firefox reload see https://bugzilla.mozilla.org/show_bug.cgi?id=654072
-  resetButtons()
+  resetButtons();
   getRandomWord();
   createLetters();
 
